@@ -1,0 +1,3627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s30="http://www.bartec-systems.com/Premises_ServiceLocation_Type_Get.xsd" xmlns:s4="http://www.bartec-systems.com/Bins_Get.xsd" xmlns:s17="http://www.bartec-systems.com/Premises_RoundSheets_Get.xsd" xmlns:s28="http://www.bartec-systems.com/ServiceRequest_Create_call.xsd" xmlns:s29="http://www.bartec-systems.com/ServiceRequestCreateResponse.xsd" xmlns:s8="http://www.bartec-systems.com/Premises_Detail_Get.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s6="http://www.bartec-systems.com/Bins_Types_Get.xsd" xmlns:s26="http://www.bartec-systems.com/Streets_Event_Types.xsd" xmlns:s32="http://www.bartec-systems.com/Premises_FutureCollections_Get.xsd" xmlns:s31="http://www.bartec-systems.com/Premises_ServiceLocation_Definition_Get.xsd" xmlns:s13="http://www.bartec-systems.com/Premises_Events_Get.xsd" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s14="http://www.bartec-systems.com/Premises_Events_Types_Get.xsd" xmlns:s15="http://www.bartec-systems.com/Premises_Events_Create.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s1="http://www.bartec-systems.com/Bins_Statuses_Get.xsd" xmlns:s10="http://www.bartec-systems.com/Premises_AttributeDefs_Get.xsd" xmlns:s11="http://www.bartec-systems.com/Premises_Attributes_Get.xsd" xmlns:s12="http://www.bartec-systems.com/ServiceRequest_Statuses_Create_Response.xsd" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s9="http://www.bartec-systems.com/Premises_Bins_Rounds_Defaults_Get.xsd" xmlns:s7="http://www.bartec-systems.com/Premises_Get.xsd" xmlns:s19="http://www.bartec-systems.com/ServiceRequests_Detail_Get.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s3="http://www.bartec-systems.com/Bins_Detail_Get.xsd" xmlns:s23="http://www.bartec-systems.com/ServiceRequest_Statuses_Get.xsd" xmlns:s24="http://www.bartec-systems.com/Streets_Detail_Get.xsd" xmlns:s25="http://www.bartec-systems.com/Streets_Events_Get.xsd" xmlns:s16="http://www.bartec-systems.com/Premises_Rounds_Get.xsd" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s2="http://www.bartec-systems.com/Rounds_RoundPlanItemFrequency_Get.xsd" xmlns:s18="http://www.bartec-systems.com/Rounds_RoundPlans_Get.xsd" xmlns:s27="http://www.bartec-systems.com/Streets_Get.xsd" xmlns:s20="http://www.bartec-systems.com/ServiceRequests_Get.xsd" xmlns:s21="http://www.bartec-systems.com/ServiceRequests_Types_Get.xsd" xmlns:s22="http://www.bartec-systems.com/ServiceRequests_History_Get.xsd" xmlns:s5="http://www.bartec-systems.com/Bins_Sizes_Get.xsd" xmlns:tns="http://bartec-systems.com/" xmlns:s33="http://www.bartec-systems.com/Vehicles_Get.xsd" xmlns:s34="http://www.bartec-systems.com/Handhelds_Get.xsd" targetNamespace="http://bartec-systems.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">WasteCollectorAPIWebServiceProject</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://bartec-systems.com/">
+      <s:import namespace="http://www.bartec-systems.com/Bins_Statuses_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Rounds_RoundPlanItemFrequency_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Bins_Detail_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Bins_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Bins_Sizes_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Bins_Types_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Premises_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Premises_Detail_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Premises_Bins_Rounds_Defaults_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Premises_AttributeDefs_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Premises_Attributes_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/ServiceRequest_Statuses_Create_Response.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Premises_Events_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Premises_Events_Types_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Premises_Events_Create.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Premises_Rounds_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Premises_RoundSheets_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Rounds_RoundPlans_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/ServiceRequests_Detail_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/ServiceRequests_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/ServiceRequests_Types_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/ServiceRequests_History_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/ServiceRequest_Statuses_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Streets_Detail_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Streets_Events_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Streets_Event_Types.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Streets_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/ServiceRequest_Create_call.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/ServiceRequestCreateResponse.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Premises_ServiceLocation_Type_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Premises_ServiceLocation_Definition_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Premises_FutureCollections_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Vehicles_Get.xsd" />
+      <s:import namespace="http://www.bartec-systems.com/Handhelds_Get.xsd" />
+      <s:element name="Bins_Statuses_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Bins_Statuses_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:Bins_Statuses_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Rounds_RoundPlanItemFrequency">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoundPlandName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BinID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Rounds_RoundPlanItemFrequencyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s2:Rounds_RoundPlanItemFrequencyResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Bins_Detail_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BinID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Bins_Detail_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s3:Bins_Detail_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Bins_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BinType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BinSize" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SerialNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Barcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" nillable="true" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Bins_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s4:Bins_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Bins_Sizes_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Bins_Sizes_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s5:Bins_Sizes_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Bins_Types_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Bins_Types_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s6:Bins_Types_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="USRN" nillable="true" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Locality" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Town" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WardName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ParishName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserLabel" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ParentUPRN" nillable="true" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bounds" type="tns:ctMapBox" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ctMapBox">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Point1" type="tns:ctMapPointQuery" />
+          <s:element minOccurs="0" maxOccurs="1" name="Point2" type="tns:ctMapPointQuery" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctMapPointQuery">
+        <s:sequence>
+          <s:choice minOccurs="1" maxOccurs="1">
+            <s:element minOccurs="0" maxOccurs="1" name="Metric" type="tns:ctPointMetric" />
+            <s:element minOccurs="0" maxOccurs="1" name="BNG" type="tns:ctPointBNG" />
+          </s:choice>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctPointMetric">
+        <s:attribute name="Latitude" type="s:decimal" use="required" />
+        <s:attribute name="Longitude" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:complexType name="ctPointBNG">
+        <s:attribute name="Easting" type="s:decimal" use="required" />
+        <s:attribute name="Northing" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:element name="Premises_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s7:Premises_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Detail_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Detail_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s8:Premises_Detail_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Bins_Rounds_Defaults_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="BinTypeID" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Bins_Rounds_Defaults_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s9:Premises_Bins_Rounds_Defaults_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_AttributeDefs_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_AttributeDefs_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s10:Premises_AttributeDefs_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Attributes_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Attributes_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s11:Premises_Attributes_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Attributes_Create">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="AttributeID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Confirmation" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Attributes_CreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s12:Premises_Attributes_CreateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Attributes_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="AttributeID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Confirmation" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Attributes_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s12:Premises_Attributes_UpdateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Attributes_Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="AttributeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Attributes_DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s12:Premises_Attributes_DeleteResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Events_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="USRN" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Postcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WardName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ParishName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Premises_Bounds" type="tns:ctMapBox" />
+            <s:element minOccurs="0" maxOccurs="1" name="Events_Bounds" type="tns:ctMapBox" />
+            <s:element minOccurs="0" maxOccurs="1" name="EventType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EventSubType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MinDistance" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxDistance" nillable="true" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoundSheet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IncludeServiceLocations" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Events_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s13:Premises_Events_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Events_Types_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Events_Types_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s14:Premises_Events_Types_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Events_Create">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" ref="s15:PremisesEvent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Events_CreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s12:Premises_Events_CreateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Rounds_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Rounds_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s16:Premises_Rounds_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Rounds_RoundSheets_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateFrom" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateTo" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" nillable="true" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ward" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BinType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoundSheetName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DayOfWeek" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="RoundPlanID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="RoundSheetID" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Rounds_RoundSheets_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s17:Rounds_RoundSheets_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Rounds_RoundPlans_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="USRN" nillable="true" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="BinType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoundPlanName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DayOfWeek" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="RoundPlanID" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Rounds_RoundPlans_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s18:Rounds_RoundPlans_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequests_Detail_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequests_Detail_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s19:ServiceRequests_Detail_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequests_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" nillable="true" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Premises_Bounds" type="tns:ctMapBox" />
+            <s:element minOccurs="0" maxOccurs="1" name="Request_Bounds" type="tns:ctMapBox" />
+            <s:element minOccurs="1" maxOccurs="1" name="RequestMinDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="RequestMaxDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContactName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalReference" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequests_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s20:ServiceRequests_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequests_Types_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequests_Types_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s21:ServiceRequests_Types_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequests_History_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" nillable="true" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Date" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequests_History_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s22:ServiceRequests_History_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Statuses_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceRequestType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Statuses_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s23:ServiceRequest_Statuses_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Streets_Detail_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="USRN" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Streets_Detail_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s24:Streets_Detail_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Streets_Events_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="USRN" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Events_Bounds" type="tns:ctMapBox" />
+            <s:element minOccurs="0" maxOccurs="1" name="EventType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IncludeServiceLocations" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Streets_Events_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s25:Streets_Events_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Streets_Events_Types_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Streets_Events_Types_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s26:Streets_Events_Types_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Streets_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="USRN" nillable="true" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Locality" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Town" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Streets_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s27:Streets_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Create">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" ref="s28:objCreateServiceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_CreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s29:ServiceRequest_CreateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Statuses_Create">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceRequestType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SequenceNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Statuses_CreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s12:ServiceRequest_Statuses_CreateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Statuses_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceRequestType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SequenceNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Statuses_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s12:ServiceRequest_Statuses_UpdateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Statuses_Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceRequestType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Statuses_DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s12:ServiceRequest_Statuses_DeleteResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Status_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Status_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s12:ServiceRequest_Status_UpdateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Note_Create">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Note_CreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s12:ServiceRequest_Note_CreateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_ServiceLocation_Type_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_ServiceLocation_Type_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s30:Premises_ServiceLocation_Type_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_ServiceLocation_Definition_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_ServiceLocation_Definition_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s31:Premises_ServiceLocation_Definition_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_FutureCollections_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_FutureCollections_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s32:Premises_FutureCollections_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Vehicles_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Vehicles_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s33:Vehicles_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Handhelds_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Handhelds_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s34:Handhelds_GetResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Bins_Statuses_Get.xsd">
+      <s:element name="Bins_Statuses_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="BinStatus">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s1:ctRecordStamp" />
+                  <s:element minOccurs="0" maxOccurs="1" name="StatusName" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s1:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Rounds_RoundPlanItemFrequency_Get.xsd">
+      <s:element name="Rounds_RoundPlanItemFrequencyResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Frequency" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s2:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:int" use="required" />
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Bins_Detail_Get.xsd">
+      <s:element name="Bins_Detail_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ctBins" type="s3:ctBin" />
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s3:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ctBin">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BinID" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinSize" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Barcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RFID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UPRN" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s3:ctRecordStamp" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Bins_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctBin">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BinID" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinSize" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Barcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RFID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UPRN" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s4:ctRecordStamp" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Bins_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Bin" type="s4:ctBin" />
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s4:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Bins_Sizes_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Bins_Sizes_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="BinSizes">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s5:ctRecordStamp" />
+                  <s:element minOccurs="0" maxOccurs="1" name="BinSize" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s5:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Bins_Types_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Bins_Types_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="BinType">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s6:ctRecordStamp" />
+                  <s:element minOccurs="0" maxOccurs="1" name="BinType" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s6:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Premises_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctMapPoint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BNG" type="s7:ctPointBNG" />
+          <s:element minOccurs="0" maxOccurs="1" name="Metric" type="s7:ctPointMetric" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctPointBNG">
+        <s:attribute name="Easting" type="s:decimal" use="required" />
+        <s:attribute name="Northing" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:complexType name="ctPointMetric">
+        <s:attribute name="Latitude" type="s:decimal" use="required" />
+        <s:attribute name="Longitude" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:complexType name="ctAddress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Locality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Town" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Premises_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Premise">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="UPRN" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="USRN" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Address" type="s7:ctAddress" />
+                  <s:element minOccurs="0" maxOccurs="1" name="UserLabel" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Location" type="s7:ctMapPoint" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s7:ctRecordStamp" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s7:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Premises_Detail_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctMapPoint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BNG" type="s8:ctPointBNG" />
+          <s:element minOccurs="0" maxOccurs="1" name="Metric" type="s8:ctPointMetric" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctPointBNG">
+        <s:attribute name="Easting" type="s:decimal" use="required" />
+        <s:attribute name="Northing" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:complexType name="ctPointMetric">
+        <s:attribute name="Latitude" type="s:decimal" use="required" />
+        <s:attribute name="Longitude" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:complexType name="ctAddress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Locality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Town" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Premises_Detail_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ParentUPRN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="USRN" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s8:ctAddress" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ParishName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WardName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Location" type="s8:ctMapPoint" />
+            <s:element minOccurs="0" maxOccurs="1" name="Attributes">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="Attribute">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="AttributeName" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" name="SystemAttribute" type="s:boolean" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s8:ctRecordStamp" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+                <s:attribute name="RecordCount" type="s:integer" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceLocations">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="ServiceLocation">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="UPRN" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" name="ServiceLocationTypeID" type="s:integer" />
+                        <s:element minOccurs="0" maxOccurs="1" name="ServiceLocationType" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s8:ctRecordStamp" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+                <s:attribute name="RecordCount" type="s:integer" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Documents">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="Document">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="DocumentName" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DocumentID" type="s:integer" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EventID" type="s:integer" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s8:ctRecordStamp" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+                <s:attribute name="RecordCount" type="s:integer" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s8:ctRecordStamp" />
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s8:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Premises_Bins_Rounds_Defaults_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Premises_Bins_Rounds_Defaults_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s9:ctRecordStamp" />
+            <s:element minOccurs="0" maxOccurs="unbounded" name="BinTypes">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+                  <s:element minOccurs="0" maxOccurs="1" name="BinType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="RoundPlans">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RoundPlan" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s9:ctRecordStamp" />
+                      </s:sequence>
+                      <s:attribute name="RecordCount" type="s:string" />
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s9:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Premises_AttributeDefs_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Premises_AttributeDefs_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Attribute">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="AttributeID" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" name="SystemAttribute" type="s:boolean" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s10:ctRecordStamp" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s10:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Premises_Attributes_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Premises_Attributes_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Attribute">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="AttributeID" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" name="SystemAttribute" type="s:boolean" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Confirmation" />
+                  <s:element minOccurs="1" maxOccurs="1" name="ConfirmationDate" type="s:dateTime" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s11:ctRecordStamp" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s11:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/ServiceRequest_Statuses_Create_Response.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Premises_Attributes_CreateResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Error" type="s12:ctError" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Attributes_UpdateResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Error" type="s12:ctError" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Attributes_DeleteResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Error" type="s12:ctError" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Premises_Events_CreateResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Error" type="s12:ctError" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Statuses_CreateResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Error" type="s12:ctError" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Statuses_UpdateResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Error" type="s12:ctError" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Statuses_DeleteResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Error" type="s12:ctError" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Status_UpdateResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Error" type="s12:ctError" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceRequest_Note_CreateResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Error" type="s12:ctError" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Premises_Events_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctMapPoint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BNG" type="s13:ctPointBNG" />
+          <s:element minOccurs="0" maxOccurs="1" name="Metric" type="s13:ctPointMetric" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctPointBNG">
+        <s:attribute name="Easting" type="s:decimal" use="required" />
+        <s:attribute name="Northing" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:complexType name="ctPointMetric">
+        <s:attribute name="Latitude" type="s:decimal" use="required" />
+        <s:attribute name="Longitude" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:element name="Premises_Events_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Event">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="EventType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="EventSubType" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" name="EventDate" type="s:dateTime" />
+                  <s:element minOccurs="1" maxOccurs="1" name="Weight" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" name="UPRN" type="s:integer" />
+                  <s:element minOccurs="1" maxOccurs="1" name="Distance" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" name="EventLocation" type="s13:ctMapPoint" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RoundSheet">
+                    <s:complexType>
+                      <s:simpleContent>
+                        <s:extension base="s:string" />
+                      </s:simpleContent>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" name="DeviceName" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DeviceType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="BinType" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" name="HasMetaData" type="s:boolean" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ctRecordStamp" type="s13:ctRecordStamp" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s13:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Premises_Events_Types_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Premises_Events_Types_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s14:ctRecordStamp" />
+            <s:element minOccurs="0" maxOccurs="unbounded" name="EventTypes">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+                  <s:element minOccurs="0" maxOccurs="1" name="EventType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="SubEvents">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+                        <s:element minOccurs="0" maxOccurs="1" name="SubEventType" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s14:ctRecordStamp" />
+                      </s:sequence>
+                      <s:attribute name="RecordCount" type="s:string" />
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="BinTypes">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="BinType" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s14:ctRecordStamp" />
+                      </s:sequence>
+                      <s:attribute name="RecordCount" type="s:string" />
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s14:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Premises_Events_Create.xsd">
+      <s:element name="PremisesEvent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="EventTypeID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SubEventID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="EventLocation" type="s15:ctMapPoint" />
+            <s:element minOccurs="0" maxOccurs="1" name="BinID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RoundSheetItemID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EventDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DeviceID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Weight" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="MetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubAccountID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ctMapPoint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BNG" type="s15:ctPointBNG" />
+          <s:element minOccurs="0" maxOccurs="1" name="Metric" type="s15:ctPointMetric" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctPointBNG">
+        <s:attribute name="Easting" type="s:decimal" use="required" />
+        <s:attribute name="Northing" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:complexType name="ctPointMetric">
+        <s:attribute name="Latitude" type="s:decimal" use="required" />
+        <s:attribute name="Longitude" type="s:decimal" use="required" />
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Premises_Rounds_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctBin">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BinID" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinSize" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Barcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RFID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UPRN" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s16:ctRecordStamp" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Premises_Rounds_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Rounds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="Round">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="RoundName" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" name="PlanFrom" type="s:dateTime" />
+                        <s:element minOccurs="1" maxOccurs="1" name="PlanUntil" type="s:dateTime" />
+                        <s:element minOccurs="0" maxOccurs="1" name="CollectionSchedule" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" name="LastScheduled" type="s:dateTime" />
+                        <s:element minOccurs="1" maxOccurs="1" name="NextScheduled" type="s:dateTime" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Weekday" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="unbounded" name="BinType" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="Bins">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="unbounded" name="Bin" type="s16:ctBin" />
+                            </s:sequence>
+                            <s:attribute name="RecordCount" type="s:integer" />
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s16:ctRecordStamp" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+                <s:attribute name="RecordCount" type="s:integer" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Bins">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="Bin" type="s16:ctBin" />
+                </s:sequence>
+                <s:attribute name="RecordCount" type="s:integer" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s16:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Premises_RoundSheets_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Rounds_RoundSheets_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="RoundSheet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="RoundSheetID" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RoundPlanID" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RoundSheetName" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RoundCapacityVolume" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RoundCapacityWeight" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RoundCapacityPremises" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RoundCapacityBins" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="BookedCapacityVolume" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="BookedCapacityWeight" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="BookedCapacityPremises" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="BookedCapacityBins" type="s:integer" />
+                  <s:element minOccurs="1" maxOccurs="1" name="PlannedExecutionDate" type="s:date" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s17:ctRecordStamp" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s17:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Rounds_RoundPlans_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRoundPlanItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ItemID" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="SequenceNumber" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinID" type="s:integer" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlanFrom" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlanUntil" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CollectionFrequency" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="UPRN" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s18:ctRecordStamp" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Rounds_RoundPlans_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="RoundPlan">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="RoundPlanID" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RoundPlanName" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" name="PlanFrom" type="s:dateTime" />
+                  <s:element minOccurs="1" maxOccurs="1" name="PlanUntil" type="s:dateTime" />
+                  <s:element minOccurs="0" maxOccurs="1" name="CollectionScheme" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="CollectionSchedule" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Weekday" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="BinType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Items">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="unbounded" name="Item" type="s18:ctRoundPlanItem" />
+                      </s:sequence>
+                      <s:attribute name="RecordCount" type="s:integer" />
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s18:ctRecordStamp" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s18:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/ServiceRequests_Detail_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctMapPoint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BNG" type="s19:ctPointBNG" />
+          <s:element minOccurs="0" maxOccurs="1" name="Metric" type="s19:ctPointMetric" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctPointBNG">
+        <s:attribute name="Easting" type="s:decimal" use="required" />
+        <s:attribute name="Northing" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:complexType name="ctPointMetric">
+        <s:attribute name="Latitude" type="s:decimal" use="required" />
+        <s:attribute name="Longitude" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:complexType name="ctAddress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Locality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Town" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ServiceRequests_Detail_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UPRN" type="s:integer" />
+            <s:element minOccurs="0" maxOccurs="1" name="PremisesAddress" type="s19:ctAddress" />
+            <s:element minOccurs="0" maxOccurs="1" name="PremisesLocation" type="s19:ctMapPoint" />
+            <s:element minOccurs="0" maxOccurs="1" name="RequestLocation" type="s19:ctMapPoint" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContactName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContactTelephone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContactEmail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateRequested" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="RequestType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RequestStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Notes">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="Note">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="NoteDetail" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s19:ctRecordStamp" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+                <s:attribute name="RecordCount" type="s:integer" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ClosingComments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExtendedData">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="ExtendedDataTypes">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="unbounded" name="Parameters">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" name="FieldName" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="FieldValue" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+                <s:attribute name="RecordCount" type="s:integer" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s19:ctRecordStamp" />
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s19:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/ServiceRequests_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctMapPoint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BNG" type="s20:ctPointBNG" />
+          <s:element minOccurs="0" maxOccurs="1" name="Metric" type="s20:ctPointMetric" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctPointBNG">
+        <s:attribute name="Easting" type="s:decimal" use="required" />
+        <s:attribute name="Northing" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:complexType name="ctPointMetric">
+        <s:attribute name="Latitude" type="s:decimal" use="required" />
+        <s:attribute name="Longitude" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:element name="ServiceRequests_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="ServiceRequest">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="ServiceCode" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="UPRN" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="PremisesLocation" type="s20:ctMapPoint" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RequestLocation" type="s20:ctMapPoint" />
+                  <s:element minOccurs="1" maxOccurs="1" name="DateRequested" type="s:dateTime" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RequestType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RequestStatus" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ExternalReference" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s20:ctRecordStamp" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s20:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/ServiceRequests_Types_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ServiceRequests_Types_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="ServiceRequestType">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="RequestType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Statuses">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="unbounded" name="Status">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" name="SequenceNumber" type="s:integer" />
+                              <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s21:ctRecordStamp" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                      <s:attribute name="RecordCount" type="s:integer" />
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s21:ctRecordStamp" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s21:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/ServiceRequests_History_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ServiceRequests_History_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="ServiceRequests">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ServiceCode" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="UPRN" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RequestedAccountNumber" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DateRequested" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ContactName" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ContactTelephone" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ContactEmail" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ServiceTypeID" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ServiceStatusID" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="ClosingComments" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="JobReference" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" name="Closed" type="s:boolean" />
+                  <s:element minOccurs="0" maxOccurs="1" name="UpdateMobile" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="txUserName" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s22:ctRecordStamp" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s22:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/ServiceRequest_Statuses_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ServiceRequest_Statuses_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="ServiceRequestStatus">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s23:ctRecordStamp" />
+                  <s:element minOccurs="0" maxOccurs="1" name="StatusName" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s23:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Streets_Detail_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Streets_Detail_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="USRN" type="s:integer" />
+            <s:element minOccurs="0" maxOccurs="1" name="Street" />
+            <s:element minOccurs="0" maxOccurs="1" name="Locality" />
+            <s:element minOccurs="0" maxOccurs="1" name="Town" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedName" />
+            <s:element minOccurs="0" maxOccurs="1" name="Attributes">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="Attribute">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="AttributeName" />
+                        <s:element minOccurs="1" maxOccurs="1" name="SystemAttribute" type="s:boolean" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s24:ctRecordStamp" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+                <s:attribute name="RecordCount" type="s:string" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Documents">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="Document">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="DocumentName" />
+                        <s:element minOccurs="0" maxOccurs="1" name="DocumentID" />
+                        <s:element minOccurs="0" maxOccurs="1" name="EventID" />
+                        <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s24:ctRecordStamp" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+                <s:attribute name="RecordCount" type="s:string" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s24:ctRecordStamp" />
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s24:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Streets_Events_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctMapPoint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BNG" type="s25:ctPointBNG" />
+          <s:element minOccurs="0" maxOccurs="1" name="Metric" type="s25:ctPointMetric" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctPointBNG">
+        <s:attribute name="Easting" type="s:decimal" use="required" />
+        <s:attribute name="Northing" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:complexType name="ctPointMetric">
+        <s:attribute name="Latitude" type="s:decimal" use="required" />
+        <s:attribute name="Longitude" type="s:decimal" use="required" />
+      </s:complexType>
+      <s:element name="Streets_Events_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Event">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="EventType" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" name="EventDate" type="s:dateTime" />
+                  <s:element minOccurs="0" maxOccurs="1" name="USRN" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="EventLocation" type="s25:ctMapPoint" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DeviceName" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DeviceType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="SheetName" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="BinTypes" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s25:ctRecordStamp" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s25:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Streets_Event_Types.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Streets_Events_Types_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="EventTypes">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="EventType" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" name="SystemEvent" type="s:boolean" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s26:ctRecordStamp" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s26:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Streets_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Streets_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Street">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="USRN" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Street" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Locality" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Town" />
+                  <s:element minOccurs="0" maxOccurs="1" name="UserDefinedName" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s27:ctRecordStamp" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s27:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/ServiceRequest_Create_call.xsd">
+      <s:element name="objCreateServiceRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UPRN" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RequestType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contact">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Notes">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="NoteText" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ExtendedData">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="ExtendedDataTypes">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="unbounded" name="Parameters">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" name="FieldName" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="FieldValue" type="s:string" />
+                              <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/ServiceRequestCreateResponse.xsd">
+      <s:element name="ServiceRequest_CreateResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Error">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceRequest">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="ServiceCode" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Premises_ServiceLocation_Type_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Premises_ServiceLocation_Type_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="LocationTypes">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="id" type="s:integer" />
+                  <s:element minOccurs="0" maxOccurs="1" name="LocationType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s30:ctRecordStamp" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s30:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Premises_ServiceLocation_Definition_Get.xsd">
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Premises_ServiceLocation_Definition_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s31:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="ServiceLocationDefinitions">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s31:ctRecordStamp" />
+                  <s:element minOccurs="0" maxOccurs="1" name="LocationType" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" name="LocationTypeID" type="s:integer" />
+                  <s:element minOccurs="1" maxOccurs="1" name="UPRN" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" name="ServiceUPRN" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" name="id" type="s:integer" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Premises_FutureCollections_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctBin">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BinID" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinSize" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Barcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RFID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UPRN" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecordStamp" type="s32:ctRecordStamp" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ctRecordStamp">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Premises_FutureCollections_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Bins">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="Bin">
+                    <s:complexType>
+                      <s:complexContent mixed="false">
+                        <s:extension base="s32:ctBin">
+                          <s:sequence>
+                            <s:element minOccurs="0" maxOccurs="1" name="FutureCollections">
+                              <s:complexType>
+                                <s:sequence>
+                                  <s:element minOccurs="0" maxOccurs="unbounded" name="FutureCollection">
+                                    <s:complexType>
+                                      <s:sequence>
+                                        <s:element minOccurs="1" maxOccurs="1" name="CollectionDate" type="s:dateTime" />
+                                      </s:sequence>
+                                    </s:complexType>
+                                  </s:element>
+                                </s:sequence>
+                                <s:attribute name="RecordCount" type="s:string" />
+                              </s:complexType>
+                            </s:element>
+                          </s:sequence>
+                        </s:extension>
+                      </s:complexContent>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+                <s:attribute name="RecordCount" type="s:integer" />
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s32:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Vehicles_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Vehicles_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Vehicle">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="1" maxOccurs="1" name="DeviceID" type="s:int" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Description" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DisplayName" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Registration" />
+                  <s:element minOccurs="0" maxOccurs="1" name="VehicleType" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Driver" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Status" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Location" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s33:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bartec-systems.com/Handhelds_Get.xsd">
+      <s:complexType name="ctError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:integer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Handhelds_GetResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="Handheld">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="1" maxOccurs="1" name="DeviceID" type="s:int" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Description" />
+                  <s:element minOccurs="0" maxOccurs="1" name="DisplayName" />
+                  <s:element minOccurs="0" maxOccurs="1" name="SerialNumber" />
+                  <s:element minOccurs="0" maxOccurs="1" name="User" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Status" />
+                  <s:element minOccurs="0" maxOccurs="1" name="Location" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Errors">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" name="Error" type="s34:ctError" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+          <s:attribute name="RecordCount" type="s:integer" />
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Bins_Statuses_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Bins_Statuses_Get" />
+  </wsdl:message>
+  <wsdl:message name="Bins_Statuses_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Bins_Statuses_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Rounds_RoundPlanItemFrequencySoapIn">
+    <wsdl:part name="parameters" element="tns:Rounds_RoundPlanItemFrequency" />
+  </wsdl:message>
+  <wsdl:message name="Rounds_RoundPlanItemFrequencySoapOut">
+    <wsdl:part name="parameters" element="tns:Rounds_RoundPlanItemFrequencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Bins_Detail_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Bins_Detail_Get" />
+  </wsdl:message>
+  <wsdl:message name="Bins_Detail_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Bins_Detail_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Bins_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Bins_Get" />
+  </wsdl:message>
+  <wsdl:message name="Bins_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Bins_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Bins_Sizes_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Bins_Sizes_Get" />
+  </wsdl:message>
+  <wsdl:message name="Bins_Sizes_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Bins_Sizes_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Bins_Types_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Bins_Types_Get" />
+  </wsdl:message>
+  <wsdl:message name="Bins_Types_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Bins_Types_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_Get" />
+  </wsdl:message>
+  <wsdl:message name="Premises_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Detail_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_Detail_Get" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Detail_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_Detail_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Bins_Rounds_Defaults_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_Bins_Rounds_Defaults_Get" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Bins_Rounds_Defaults_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_Bins_Rounds_Defaults_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_AttributeDefs_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_AttributeDefs_Get" />
+  </wsdl:message>
+  <wsdl:message name="Premises_AttributeDefs_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_AttributeDefs_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Attributes_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_Attributes_Get" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Attributes_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_Attributes_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Attributes_CreateSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_Attributes_Create" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Attributes_CreateSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_Attributes_CreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Attributes_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_Attributes_Update" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Attributes_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_Attributes_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Attributes_DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_Attributes_Delete" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Attributes_DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_Attributes_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Events_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_Events_Get" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Events_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_Events_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Events_Types_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_Events_Types_Get" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Events_Types_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_Events_Types_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Events_CreateSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_Events_Create" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Events_CreateSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_Events_CreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Rounds_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_Rounds_Get" />
+  </wsdl:message>
+  <wsdl:message name="Premises_Rounds_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_Rounds_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Rounds_RoundSheets_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Rounds_RoundSheets_Get" />
+  </wsdl:message>
+  <wsdl:message name="Rounds_RoundSheets_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Rounds_RoundSheets_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Rounds_RoundPlans_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Rounds_RoundPlans_Get" />
+  </wsdl:message>
+  <wsdl:message name="Rounds_RoundPlans_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Rounds_RoundPlans_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequests_Detail_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceRequests_Detail_Get" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequests_Detail_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceRequests_Detail_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequests_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceRequests_Get" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequests_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceRequests_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequests_Types_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceRequests_Types_Get" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequests_Types_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceRequests_Types_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequests_History_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceRequests_History_Get" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequests_History_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceRequests_History_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequest_Statuses_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceRequest_Statuses_Get" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequest_Statuses_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceRequest_Statuses_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Streets_Detail_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Streets_Detail_Get" />
+  </wsdl:message>
+  <wsdl:message name="Streets_Detail_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Streets_Detail_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Streets_Events_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Streets_Events_Get" />
+  </wsdl:message>
+  <wsdl:message name="Streets_Events_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Streets_Events_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Streets_Events_Types_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Streets_Events_Types_Get" />
+  </wsdl:message>
+  <wsdl:message name="Streets_Events_Types_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Streets_Events_Types_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Streets_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Streets_Get" />
+  </wsdl:message>
+  <wsdl:message name="Streets_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Streets_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequest_CreateSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceRequest_Create" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequest_CreateSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceRequest_CreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequest_Statuses_CreateSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceRequest_Statuses_Create" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequest_Statuses_CreateSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceRequest_Statuses_CreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequest_Statuses_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceRequest_Statuses_Update" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequest_Statuses_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceRequest_Statuses_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequest_Statuses_DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceRequest_Statuses_Delete" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequest_Statuses_DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceRequest_Statuses_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequest_Status_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceRequest_Status_Update" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequest_Status_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceRequest_Status_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequest_Note_CreateSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceRequest_Note_Create" />
+  </wsdl:message>
+  <wsdl:message name="ServiceRequest_Note_CreateSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceRequest_Note_CreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_ServiceLocation_Type_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_ServiceLocation_Type_Get" />
+  </wsdl:message>
+  <wsdl:message name="Premises_ServiceLocation_Type_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_ServiceLocation_Type_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_ServiceLocation_Definition_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_ServiceLocation_Definition_Get" />
+  </wsdl:message>
+  <wsdl:message name="Premises_ServiceLocation_Definition_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_ServiceLocation_Definition_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Premises_FutureCollections_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Premises_FutureCollections_Get" />
+  </wsdl:message>
+  <wsdl:message name="Premises_FutureCollections_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Premises_FutureCollections_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Vehicles_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Vehicles_Get" />
+  </wsdl:message>
+  <wsdl:message name="Vehicles_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Vehicles_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Handhelds_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:Handhelds_Get" />
+  </wsdl:message>
+  <wsdl:message name="Handhelds_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:Handhelds_GetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WasteCollectorAPIWebServiceSoap">
+    <wsdl:operation name="Bins_Statuses_Get">
+      <wsdl:input message="tns:Bins_Statuses_GetSoapIn" />
+      <wsdl:output message="tns:Bins_Statuses_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Rounds_RoundPlanItemFrequency">
+      <wsdl:input message="tns:Rounds_RoundPlanItemFrequencySoapIn" />
+      <wsdl:output message="tns:Rounds_RoundPlanItemFrequencySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Bins_Detail_Get">
+      <wsdl:input message="tns:Bins_Detail_GetSoapIn" />
+      <wsdl:output message="tns:Bins_Detail_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Bins_Get">
+      <wsdl:input message="tns:Bins_GetSoapIn" />
+      <wsdl:output message="tns:Bins_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Bins_Sizes_Get">
+      <wsdl:input message="tns:Bins_Sizes_GetSoapIn" />
+      <wsdl:output message="tns:Bins_Sizes_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Bins_Types_Get">
+      <wsdl:input message="tns:Bins_Types_GetSoapIn" />
+      <wsdl:output message="tns:Bins_Types_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Get">
+      <wsdl:input message="tns:Premises_GetSoapIn" />
+      <wsdl:output message="tns:Premises_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Detail_Get">
+      <wsdl:input message="tns:Premises_Detail_GetSoapIn" />
+      <wsdl:output message="tns:Premises_Detail_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Bins_Rounds_Defaults_Get">
+      <wsdl:input message="tns:Premises_Bins_Rounds_Defaults_GetSoapIn" />
+      <wsdl:output message="tns:Premises_Bins_Rounds_Defaults_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_AttributeDefs_Get">
+      <wsdl:input message="tns:Premises_AttributeDefs_GetSoapIn" />
+      <wsdl:output message="tns:Premises_AttributeDefs_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Attributes_Get">
+      <wsdl:input message="tns:Premises_Attributes_GetSoapIn" />
+      <wsdl:output message="tns:Premises_Attributes_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Attributes_Create">
+      <wsdl:input message="tns:Premises_Attributes_CreateSoapIn" />
+      <wsdl:output message="tns:Premises_Attributes_CreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Attributes_Update">
+      <wsdl:input message="tns:Premises_Attributes_UpdateSoapIn" />
+      <wsdl:output message="tns:Premises_Attributes_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Attributes_Delete">
+      <wsdl:input message="tns:Premises_Attributes_DeleteSoapIn" />
+      <wsdl:output message="tns:Premises_Attributes_DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Events_Get">
+      <wsdl:input message="tns:Premises_Events_GetSoapIn" />
+      <wsdl:output message="tns:Premises_Events_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Events_Types_Get">
+      <wsdl:input message="tns:Premises_Events_Types_GetSoapIn" />
+      <wsdl:output message="tns:Premises_Events_Types_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Events_Create">
+      <wsdl:input message="tns:Premises_Events_CreateSoapIn" />
+      <wsdl:output message="tns:Premises_Events_CreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Rounds_Get">
+      <wsdl:input message="tns:Premises_Rounds_GetSoapIn" />
+      <wsdl:output message="tns:Premises_Rounds_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Rounds_RoundSheets_Get">
+      <wsdl:input message="tns:Rounds_RoundSheets_GetSoapIn" />
+      <wsdl:output message="tns:Rounds_RoundSheets_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Rounds_RoundPlans_Get">
+      <wsdl:input message="tns:Rounds_RoundPlans_GetSoapIn" />
+      <wsdl:output message="tns:Rounds_RoundPlans_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequests_Detail_Get">
+      <wsdl:input message="tns:ServiceRequests_Detail_GetSoapIn" />
+      <wsdl:output message="tns:ServiceRequests_Detail_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequests_Get">
+      <wsdl:input message="tns:ServiceRequests_GetSoapIn" />
+      <wsdl:output message="tns:ServiceRequests_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequests_Types_Get">
+      <wsdl:input message="tns:ServiceRequests_Types_GetSoapIn" />
+      <wsdl:output message="tns:ServiceRequests_Types_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequests_History_Get">
+      <wsdl:input message="tns:ServiceRequests_History_GetSoapIn" />
+      <wsdl:output message="tns:ServiceRequests_History_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Statuses_Get">
+      <wsdl:input message="tns:ServiceRequest_Statuses_GetSoapIn" />
+      <wsdl:output message="tns:ServiceRequest_Statuses_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Streets_Detail_Get">
+      <wsdl:input message="tns:Streets_Detail_GetSoapIn" />
+      <wsdl:output message="tns:Streets_Detail_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Streets_Events_Get">
+      <wsdl:input message="tns:Streets_Events_GetSoapIn" />
+      <wsdl:output message="tns:Streets_Events_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Streets_Events_Types_Get">
+      <wsdl:input message="tns:Streets_Events_Types_GetSoapIn" />
+      <wsdl:output message="tns:Streets_Events_Types_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Streets_Get">
+      <wsdl:input message="tns:Streets_GetSoapIn" />
+      <wsdl:output message="tns:Streets_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Create">
+      <wsdl:input message="tns:ServiceRequest_CreateSoapIn" />
+      <wsdl:output message="tns:ServiceRequest_CreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Statuses_Create">
+      <wsdl:input message="tns:ServiceRequest_Statuses_CreateSoapIn" />
+      <wsdl:output message="tns:ServiceRequest_Statuses_CreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Statuses_Update">
+      <wsdl:input message="tns:ServiceRequest_Statuses_UpdateSoapIn" />
+      <wsdl:output message="tns:ServiceRequest_Statuses_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Statuses_Delete">
+      <wsdl:input message="tns:ServiceRequest_Statuses_DeleteSoapIn" />
+      <wsdl:output message="tns:ServiceRequest_Statuses_DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Status_Update">
+      <wsdl:input message="tns:ServiceRequest_Status_UpdateSoapIn" />
+      <wsdl:output message="tns:ServiceRequest_Status_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Note_Create">
+      <wsdl:input message="tns:ServiceRequest_Note_CreateSoapIn" />
+      <wsdl:output message="tns:ServiceRequest_Note_CreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_ServiceLocation_Type_Get">
+      <wsdl:input message="tns:Premises_ServiceLocation_Type_GetSoapIn" />
+      <wsdl:output message="tns:Premises_ServiceLocation_Type_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_ServiceLocation_Definition_Get">
+      <wsdl:input message="tns:Premises_ServiceLocation_Definition_GetSoapIn" />
+      <wsdl:output message="tns:Premises_ServiceLocation_Definition_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Premises_FutureCollections_Get">
+      <wsdl:input message="tns:Premises_FutureCollections_GetSoapIn" />
+      <wsdl:output message="tns:Premises_FutureCollections_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Vehicles_Get">
+      <wsdl:input message="tns:Vehicles_GetSoapIn" />
+      <wsdl:output message="tns:Vehicles_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Handhelds_Get">
+      <wsdl:input message="tns:Handhelds_GetSoapIn" />
+      <wsdl:output message="tns:Handhelds_GetSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WasteCollectorAPIWebServiceSoap" type="tns:WasteCollectorAPIWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Bins_Statuses_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Bins_Statuses_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rounds_RoundPlanItemFrequency">
+      <soap:operation soapAction="http://bartec-systems.com/Rounds_RoundPlanItemFrequency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bins_Detail_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Bins_Detail_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bins_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Bins_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bins_Sizes_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Bins_Sizes_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bins_Types_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Bins_Types_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Detail_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_Detail_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Bins_Rounds_Defaults_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_Bins_Rounds_Defaults_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_AttributeDefs_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_AttributeDefs_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Attributes_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_Attributes_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Attributes_Create">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_Attributes_Create" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Attributes_Update">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_Attributes_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Attributes_Delete">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_Attributes_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Events_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_Events_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Events_Types_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_Events_Types_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Events_Create">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_Events_Create" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Rounds_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_Rounds_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rounds_RoundSheets_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Rounds_RoundSheets_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rounds_RoundPlans_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Rounds_RoundPlans_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequests_Detail_Get">
+      <soap:operation soapAction="http://bartec-systems.com/ServiceRequests_Detail_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequests_Get">
+      <soap:operation soapAction="http://bartec-systems.com/ServiceRequests_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequests_Types_Get">
+      <soap:operation soapAction="http://bartec-systems.com/ServiceRequests_Types_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequests_History_Get">
+      <soap:operation soapAction="http://bartec-systems.com/ServiceRequests_History_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Statuses_Get">
+      <soap:operation soapAction="http://bartec-systems.com/ServiceRequest_Statuses_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Streets_Detail_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Streets_Detail_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Streets_Events_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Streets_Events_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Streets_Events_Types_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Streets_Events_Types_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Streets_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Streets_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Create">
+      <soap:operation soapAction="http://bartec-systems.com/ServiceRequest_Create" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Statuses_Create">
+      <soap:operation soapAction="http://bartec-systems.com/ServiceRequest_Statuses_Create" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Statuses_Update">
+      <soap:operation soapAction="http://bartec-systems.com/ServiceRequest_Statuses_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Statuses_Delete">
+      <soap:operation soapAction="http://bartec-systems.com/ServiceRequest_Statuses_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Status_Update">
+      <soap:operation soapAction="http://bartec-systems.com/ServiceRequest_Status_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Note_Create">
+      <soap:operation soapAction="http://bartec-systems.com/ServiceRequest_Note_Create" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_ServiceLocation_Type_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_ServiceLocation_Type_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_ServiceLocation_Definition_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_ServiceLocation_Definition_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_FutureCollections_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Premises_FutureCollections_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Vehicles_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Vehicles_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Handhelds_Get">
+      <soap:operation soapAction="http://bartec-systems.com/Handhelds_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WasteCollectorAPIWebServiceSoap12" type="tns:WasteCollectorAPIWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Bins_Statuses_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Bins_Statuses_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rounds_RoundPlanItemFrequency">
+      <soap12:operation soapAction="http://bartec-systems.com/Rounds_RoundPlanItemFrequency" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bins_Detail_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Bins_Detail_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bins_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Bins_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bins_Sizes_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Bins_Sizes_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bins_Types_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Bins_Types_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Detail_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_Detail_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Bins_Rounds_Defaults_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_Bins_Rounds_Defaults_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_AttributeDefs_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_AttributeDefs_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Attributes_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_Attributes_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Attributes_Create">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_Attributes_Create" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Attributes_Update">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_Attributes_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Attributes_Delete">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_Attributes_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Events_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_Events_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Events_Types_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_Events_Types_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Events_Create">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_Events_Create" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_Rounds_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_Rounds_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rounds_RoundSheets_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Rounds_RoundSheets_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rounds_RoundPlans_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Rounds_RoundPlans_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequests_Detail_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/ServiceRequests_Detail_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequests_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/ServiceRequests_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequests_Types_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/ServiceRequests_Types_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequests_History_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/ServiceRequests_History_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Statuses_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/ServiceRequest_Statuses_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Streets_Detail_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Streets_Detail_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Streets_Events_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Streets_Events_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Streets_Events_Types_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Streets_Events_Types_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Streets_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Streets_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Create">
+      <soap12:operation soapAction="http://bartec-systems.com/ServiceRequest_Create" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Statuses_Create">
+      <soap12:operation soapAction="http://bartec-systems.com/ServiceRequest_Statuses_Create" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Statuses_Update">
+      <soap12:operation soapAction="http://bartec-systems.com/ServiceRequest_Statuses_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Statuses_Delete">
+      <soap12:operation soapAction="http://bartec-systems.com/ServiceRequest_Statuses_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Status_Update">
+      <soap12:operation soapAction="http://bartec-systems.com/ServiceRequest_Status_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceRequest_Note_Create">
+      <soap12:operation soapAction="http://bartec-systems.com/ServiceRequest_Note_Create" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_ServiceLocation_Type_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_ServiceLocation_Type_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_ServiceLocation_Definition_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_ServiceLocation_Definition_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Premises_FutureCollections_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Premises_FutureCollections_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Vehicles_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Vehicles_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Handhelds_Get">
+      <soap12:operation soapAction="http://bartec-systems.com/Handhelds_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WasteCollectorAPIWebService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">WasteCollectorAPIWebServiceProject</wsdl:documentation>
+    <wsdl:port name="WasteCollectorAPIWebServiceSoap" binding="tns:WasteCollectorAPIWebServiceSoap">
+      <soap:address location="https://ws.bartec-systems.com/API-R5-PROD-v5-0-0-0/WasteCollectorAPI.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WasteCollectorAPIWebServiceSoap12" binding="tns:WasteCollectorAPIWebServiceSoap12">
+      <soap12:address location="https://ws.bartec-systems.com/API-R5-PROD-v5-0-0-0/WasteCollectorAPI.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

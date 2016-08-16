@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://ws.bartec-systems.com/API-R5-PROD-v5-0-0-0/WasteCollectorAPI.asmx?wsdl" docRef="https://ws.bartec-systems.com/API-R5-PROD-v5-0-0-0/WasteCollectorAPI.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://ws.bartec-systems.com/API-R5-PROD-v5-0-0-0/WasteCollectorAPI.asmx" xmlns:q1="http://bartec-systems.com/" binding="q1:WasteCollectorAPIWebServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://ws.bartec-systems.com/API-R5-PROD-v5-0-0-0/WasteCollectorAPI.asmx" xmlns:q2="http://bartec-systems.com/" binding="q2:WasteCollectorAPIWebServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>
